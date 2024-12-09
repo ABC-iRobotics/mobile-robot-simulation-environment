@@ -1,0 +1,338 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/abstract/GenericTireAppearance.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/mir/mir100/protos/Mir100UltrasonicSensor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Sand.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Cardboard.proto"
+
+WorldInfo {
+  basicTimeStep 64
+  FPS 165
+  optimalThreadCount 8
+}
+Viewpoint {
+  orientation -0.5019660672182888 0.5424501843893857 0.6736303621551849 1.8830210388350086
+  position -2.6386274226623305 -6.826833906356263 20.894629880119755
+  follow "robot"
+  lensFlare LensFlare {
+  }
+  ambientOcclusionRadius 1
+  bloomThreshold 1
+}
+TexturedBackground {
+  texture "stadium"
+  skyColor [
+    0 0.3 0.6
+  ]
+}
+TexturedBackgroundLight {
+  texture "stadium"
+}
+Floor {
+  size 10000 10000
+  tileSize 1 1
+  appearance Sand {
+    IBLStrength 0.6
+  }
+}
+Solid {
+  translation 0.6192841797265413 -0.026872190831232726 0.1518999995519045
+  rotation -0.6929569065424201 -0.19902771543744222 0.6929637033517067 -2.748677769937223
+  children [
+    DEF boxShape Shape {
+      appearance Cardboard {
+        type "bottom"
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "box(4)"
+  boundingObject USE boxShape
+  physics Physics {
+  }
+  linearVelocity -6.545995480975257e-06 1.0387946170285884e-06 2.203374053557791e-09
+  angularVelocity -4.1518726925662395e-06 -2.6163150481238947e-05 -1.1146596692510975e-16
+}
+Solid {
+  translation 4.413625140880578 0.07237618889030328 0.15190066899555513
+  rotation 0.9976279980703064 -0.06883587339631048 -1.2926899618969606e-16 3.141592653589793
+  children [
+    DEF boxShape Shape {
+      appearance Cardboard {
+        type "bottom"
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "box(5)"
+  boundingObject USE boxShape
+  physics Physics {
+  }
+  linearVelocity 3.39596094314433e-16 -2.0815990398842875e-17 -3.2178728043809994e-06
+  angularVelocity -8.731149137020111e-17 1.3969838619232182e-15 2.983285589370447e-17
+}
+Solid {
+  translation -5.002183225326795 0.5203016259015054 0.15189999998472836
+  rotation 0.04757020536584938 0.7063066717689191 0.7063058551195531 3.0465212588568455
+  children [
+    DEF boxShape Shape {
+      appearance Cardboard {
+        type "bottom"
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "box(9)"
+  boundingObject USE boxShape
+  physics Physics {
+  }
+  linearVelocity 1.1437034308041279e-06 -8.135120225518626e-07 7.561105265364998e-11
+  angularVelocity 3.2514592349834157e-06 4.571174093922562e-06 4.298832505093824e-17
+}
+Solid {
+  translation -2.5959050354775473 -3.0017823283313807 0.1519000000807838
+  rotation 0.6993303600368257 -0.14791593884209236 -0.6993267638001751 -2.8478932211011014
+  children [
+    DEF boxShape Shape {
+      appearance Cardboard {
+        type "bottom"
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "box(2)"
+  boundingObject USE boxShape
+  physics Physics {
+  }
+  linearVelocity 2.8697532113388977e-06 -1.918644684744342e-06 -3.7554069648674095e-10
+  angularVelocity 7.668472999254336e-06 1.1469880374425116e-05 3.071604039851481e-17
+}
+Solid {
+  translation -1.8606572254317164 3.520043615039522 0.15190000000000003
+  rotation -0.09607336169276293 -0.7038358860844148 0.7038358861501863 2.9500338554774808
+  children [
+    DEF boxShape Shape {
+      appearance Cardboard {
+        type "bottom"
+      }
+      geometry Box {
+        size 0.5 0.5 0.5
+      }
+    }
+  ]
+  name "box(1)"
+  boundingObject USE boxShape
+  physics Physics {
+  }
+  linearVelocity 2.508876967386262e-10 -9.376867821722365e-11 -2.8444977652863707e-19
+  angularVelocity 3.747765300793759e-10 1.002752544134386e-09 7.158649830761414e-17
+}
+Robot {
+  translation -2.4366624089226314 0.08764546426690373 0.2412851785830206
+  rotation -4.978669385045935e-05 -4.008562683714292e-05 0.9999999979572137 1.4009356765677972
+  children [
+    Mir100UltrasonicSensor {
+      translation 0.5 0.3 0.1
+      rotation 0 0 -1 4.692820414042842e-06
+      name "UltraSonic_L"
+      lookupTable [
+        0.01 1000 0
+        0.5 0 0
+      ]
+    }
+    Mir100UltrasonicSensor {
+      translation 0.5 -0.31 0.1
+      rotation 0 0 1 3.46682e-06
+      name "UltraSonic_R"
+      lookupTable [
+        0.01 1000 0
+        0.5 0 0
+      ]
+    }
+    DEF CAMELOT_shape Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "https://upload.wikimedia.org/wikipedia/commons/0/03/Scratch_BG_Metal_Plate_05.png"
+          ]
+          filtering 5
+        }
+      }
+      geometry Box {
+        size 1 0.5 0.3
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 10484.843506133659
+        axis 0 1 0
+        anchor 0.25 0.3 -0.1
+        dampingConstant 0.2
+      }
+      device [
+        RotationalMotor {
+          name "Wheel_FrontLeft"
+        }
+      ]
+      endPoint Solid {
+        translation 0.24998772936559452 0.3000000000002896 -0.09999054977276783
+        rotation 0.5591989408195289 -0.5862141332324728 0.5862162865230015 2.1218391951719773
+        children [
+          DEF wheelShape Shape {
+            appearance GenericTireAppearance {
+            }
+            geometry Cylinder {
+              height 0.075
+              radius 0.15
+              subdivision 64
+            }
+          }
+        ]
+        name "Wheel_FrontLeft"
+        boundingObject USE wheelShape
+        physics DEF wheelPH Physics {
+        }
+        linearVelocity 1.4018350465300206e-08 9.215604259523427e-08 -9.756940100964582e-05
+        angularVelocity -6.133805535657223e-07 9.292081783452023e-08 -2.4222387126115626e-10
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 12024.655429012697
+        axis 0 1 0
+        anchor -0.25 0.3 -0.1
+        dampingConstant 0.2
+      }
+      device [
+        RotationalMotor {
+          name "Wheel_BackLeft"
+        }
+      ]
+      endPoint Solid {
+        translation -0.2501471255271174 0.2998487202165833 -0.09993741294082387
+        rotation 0.1913946783922929 0.6940377197499491 -0.6940314983107048 2.7634035944298674
+        children [
+          USE wheelShape
+        ]
+        name "Wheel_BackLeft"
+        boundingObject USE wheelShape
+        physics DEF wheelPH Physics {
+        }
+        linearVelocity 1.3931261528647994e-08 9.222812544554457e-08 -9.725095605378145e-05
+        angularVelocity -6.163187525659884e-07 9.342582393716928e-08 -2.4248768756612884e-10
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 8755.82288913857
+        axis 0 1 0
+        anchor -0.25 -0.3 -0.1
+        dampingConstant 0.2
+      }
+      device [
+        RotationalMotor {
+          name "Wheel_BackRight"
+        }
+      ]
+      endPoint Solid {
+        translation -0.25000754044818246 -0.2999999999996673 -0.10001352533784258
+        rotation -0.13438422422902965 0.7006915417737678 -0.7006941155490475 3.4087595329086335
+        children [
+          USE wheelShape
+        ]
+        name "Wheel_BackRight"
+        boundingObject USE wheelShape
+        physics DEF wheelPH Physics {
+        }
+        linearVelocity 1.3880114205317435e-08 9.204894979688672e-08 -9.725384469459038e-05
+        angularVelocity -6.132138685733528e-07 9.288973179559332e-08 -2.4220453470926906e-10
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 12019.617884875815
+        axis 0 1 0
+        anchor 0.25 -0.3 -0.1
+        dampingConstant 0.2
+      }
+      device [
+        RotationalMotor {
+          name "Wheel_FrontRight"
+        }
+      ]
+      endPoint Solid {
+        translation 0.24999260023473732 -0.30000000000028715 -0.1000136058366559
+        rotation 0.9991244395711673 0.029583338410550823 -0.02958344706230045 1.5716759438143924
+        children [
+          USE wheelShape
+        ]
+        name "Wheel_FrontRight"
+        boundingObject USE wheelShape
+        physics DEF wheelPH Physics {
+        }
+        linearVelocity 1.3996281350861735e-08 9.202800274471795e-08 -9.755277754949929e-05
+        angularVelocity -6.132099536270052e-07 9.289379837348077e-08 -2.4221529224885286e-10
+      }
+    }
+    Camera {
+      translation 0.5 0 0.1
+      children [
+        DEF sensorCover Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.1 0.1 0.1
+              shininess 1
+              transparency 0.02
+            }
+          }
+          geometry Sphere {
+            radius 0.02
+          }
+        }
+      ]
+      width 512
+      height 512
+    }
+    RangeFinder {
+      translation 0.5 0 0.06
+      rotation 0 1 0 0
+      children [
+        USE sensorCover
+      ]
+      fieldOfView 0.7854
+      width 128
+      height 128
+      near 0.1
+      minRange 0.1
+      maxRange 10
+      noise 0.01
+      resolution 0.01
+    }
+    GPS {
+    }
+  ]
+  boundingObject USE CAMELOT_shape
+  physics Physics {
+    density -1
+    mass 1
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controller "CAMELOT"
+  linearVelocity 2.340326240198851e-08 1.5443197181573772e-07 -9.743126140371913e-05
+  angularVelocity -6.130015983642203e-07 9.29062083187342e-08 -2.4231387690180306e-10
+}
